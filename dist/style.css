@@ -59,3 +59,16 @@ dialog{width:min(940px,calc(100% - 48px));max-height:92vh;max-height:92dvh;paddi
 @media(prefers-reduced-motion:reduce){.project,.project.reveal-pending{opacity:1;transform:none;transition:none}}
 
 body{overflow-x:clip}
+
+/* A personal story, with room for the photograph and the closing thought. */
+.about{grid-template-columns:minmax(220px,.7fr) minmax(0,1.65fr);column-gap:70px;row-gap:44px;align-items:start;padding:58px 22px 55px}
+.about .portrait{width:100%;max-width:320px;aspect-ratio:1;margin-top:27px;border-radius:14px}
+.about-copy>.eyebrow{display:block;margin-bottom:17px;font-size:10px;letter-spacing:2px}
+.about-copy h2{font-size:46px;line-height:1.12;max-width:760px;letter-spacing:-1.3px}
+.about-story{margin-top:26px;max-width:740px}
+.about .about-story p{font-size:22px;line-height:1.5;color:#656c70;margin:0 0 18px}
+.about .about-story p:last-child{margin-bottom:0}
+.about-quote{grid-column:1/-1;width:min(850px,100%);margin:0 auto;padding:35px 30px 0;text-align:center;font:italic 37px/1.3 var(--serif);letter-spacing:-.4px;color:var(--blue)}
+.about-quote::before{content:'';display:block;width:44px;height:1px;background:#bccbd8;margin:0 auto 27px}
+@media(max-width:1050px){.about{column-gap:40px}.about-copy h2{font-size:39px}.about .about-story p{font-size:21px}.about-quote{font-size:34px}}
+@media(max-width:700px){.about{grid-template-columns:1fr;padding:35px 7px 36px;gap:29px}.about .portrait{width:190px;margin-top:0;max-width:100%}.about-copy>.eyebrow{font-size:9px;margin-bottom:14px}.about-copy h2{font-size:35px;line-height:1.15;letter-spacing:-.9px}.about-story{margin-top:22px}.about .about-story p{font-size:20px;line-height:1.5;margin-bottom:17px}.about-quote{font-size:29px;line-height:1.3;padding:5px 10px 0}.about-quote::before{margin-bottom:22px}}
