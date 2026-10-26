@@ -72,3 +72,14 @@ body{overflow-x:clip}
 .about-quote::before{content:'';display:block;width:44px;height:1px;background:#bccbd8;margin:0 auto 27px}
 @media(max-width:1050px){.about{column-gap:40px}.about-copy h2{font-size:39px}.about .about-story p{font-size:21px}.about-quote{font-size:34px}}
 @media(max-width:700px){.about{grid-template-columns:1fr;padding:35px 7px 36px;gap:29px}.about .portrait{width:190px;margin-top:0;max-width:100%}.about-copy>.eyebrow{font-size:9px;margin-bottom:14px}.about-copy h2{font-size:35px;line-height:1.15;letter-spacing:-.9px}.about-story{margin-top:22px}.about .about-story p{font-size:20px;line-height:1.5;margin-bottom:17px}.about-quote{font-size:29px;line-height:1.3;padding:5px 10px 0}.about-quote::before{margin-bottom:22px}}
+
+/* Project stories are composed for reading within the fixed-close dialog. */
+.dialog-copy>.case-study-intro{font-size:29px;font-style:italic;line-height:1.3;color:var(--blue);margin:8px 0 20px}
+.case-study{margin-top:34px}
+.case-section{display:grid;grid-template-columns:26px minmax(0,1fr);gap:17px;border-top:1px solid #dfdfd8;padding:25px 0 28px}
+.case-number{font:10px var(--sans);color:#8799a4;letter-spacing:.5px;padding-top:8px}
+.case-section h3{font-family:var(--serif);font-size:29px;font-weight:500;line-height:1.2;letter-spacing:-.4px;color:var(--ink);margin:0 0 13px}
+.case-section p{font-size:22px;line-height:1.5;color:#666f74;margin:0 0 13px;max-width:740px}
+.case-section p:last-child{margin-bottom:0}
+.case-section:last-child{padding-bottom:8px}
+@media(max-width:700px){.dialog-copy>.case-study-intro{font-size:25px}.case-study{margin-top:27px}.case-section{grid-template-columns:19px minmax(0,1fr);gap:10px;padding:22px 0}.case-number{font-size:9px;padding-top:7px}.case-section h3{font-size:26px;margin-bottom:11px}.case-section p{font-size:20px;line-height:1.45;margin-bottom:13px}}
