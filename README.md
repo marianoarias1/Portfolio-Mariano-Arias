@@ -44,3 +44,4 @@ La sección «Sobre mí» y los casos de estudio todavía tienen contenido provi
 ## Tipografías
 
 Las fuentes incluidas conservan sus licencias en `dist/assets/licenses/`. La bienvenida utiliza curvas SVG ajustadas para la animación, basadas en Dancing Script.
+
