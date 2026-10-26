@@ -14,3 +14,48 @@
 .film-mobile .image-button img{width:100%;height:100%;border-radius:4px}
 dialog>img{height:auto;max-height:64dvh;object-fit:contain;background:#f0ede7}
 @media(max-width:700px){dialog>img{max-height:60dvh}.film-mobile .image-button{padding:7px}.image-button:hover img{transform:none}}
+/* Full-viewport introduction, with navigation over the top of the same screen. */
+.header{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:3}
+.hero{position:relative;width:100vw;margin-left:calc(50% - 50vw);min-height:100vh;min-height:100svh;border:0;border-radius:0;padding:112px 40px 100px}
+.hero .welcome{height:clamp(165px,29svh,300px);max-width:1000px}
+.scroll-cue{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px;font:11px var(--sans);color:#74838b;white-space:nowrap;letter-spacing:.3px}
+.scroll-cue span{font-size:21px;color:var(--blue)}
+.project{transition:opacity .85s ease,transform .85s cubic-bezier(.2,.65,.3,1)}
+.project.reveal-pending{opacity:0;transform:translateY(30px)}
+.project-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px;font:11px var(--sans)}
+.project-details,.project-web{padding:10px 13px;border:1px solid #ccd4d7;border-radius:6px;background:transparent;color:var(--blue);font:inherit;min-height:38px;display:inline-flex;align-items:center;justify-content:center}
+.project-details:hover,.project-web:hover{background:#eaf0f2;border-color:#a4b6c1}
+.project-web{background:#edf2f4}
+.portrait{overflow:hidden;aspect-ratio:1;max-width:245px}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+/* The outer shell never scrolls. Only its inset content area does. */
+dialog{width:min(940px,calc(100% - 48px));max-height:92vh;max-height:92dvh;padding:0 16px 16px;border:1px solid #e1ded7;border-radius:32px;overflow:hidden;box-shadow:0 30px 110px #20323e30}
+.dialog-toolbar{height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 7px 0 17px;gap:16px}
+.dialog-toolbar .eyebrow{font-size:9px;letter-spacing:1.8px}
+.dialog-toolbar .close{position:static;display:flex;align-items:center;justify-content:center;flex:none;width:38px;height:38px;border:1px solid #d6dde0;background:#edf1f2;border-radius:50%;color:var(--blue);padding:0}
+.dialog-toolbar .close:hover{background:#dfe8ec}
+.dialog-content{position:relative;overflow:hidden;border-radius:22px;border:1px solid #e3e3de;background:#f6f4ef}
+.dialog-scroller{max-height:calc(88vh - 78px);max-height:calc(88dvh - 78px);overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;scroll-behavior:auto}
+.dialog-scroller::-webkit-scrollbar{display:none}
+.dialog-flow{padding:20px 43px 26px 20px}
+.dialog-media{padding:10px;background:#f0ede7;border-radius:13px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.dialog-media img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:7px}
+.dialog-media img.mobile-capture{max-width:400px}
+.dialog-copy{padding:28px 9px 15px}
+.dialog-copy h2{font-size:47px;letter-spacing:-1.5px;line-height:1.1}
+.dialog-copy>p{font-size:23px;line-height:1.45}
+.dialog-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:23px}
+[hidden]{display:none!important}
+.curved-scrollbar{position:absolute;inset:0 0 0 auto;width:64px;height:100%;overflow:visible;pointer-events:none;touch-action:none;color:#56778e}
+.scroll-rail{fill:none;stroke:#a8becd;stroke-opacity:.24;stroke-width:2;stroke-linecap:round}
+.scroll-handle{fill:none;stroke:#698ba3;stroke-width:3.5;stroke-linecap:round;pointer-events:stroke}
+.scroll-hit{fill:none;stroke:transparent;stroke-width:20;pointer-events:stroke;cursor:grab}
+.curved-scrollbar.is-dragging .scroll-hit{cursor:grabbing}
+.curved-scrollbar:hover .scroll-handle,.curved-scrollbar:focus-visible .scroll-handle{stroke:#365e79;stroke-width:4.5}
+.curved-scrollbar:focus-visible{outline:0;filter:drop-shadow(0 0 2px #668da7)}
+.curved-scrollbar.is-hidden{visibility:hidden}
+.dialog-scroller:focus-visible{outline:2px solid #7998ad;outline-offset:-3px;border-radius:22px}
+@media(max-width:700px){.hero{padding:96px 28px 86px}.hero .welcome{height:clamp(145px,25svh,210px)}.hero p{max-width:340px}.scroll-cue{bottom:23px;font-size:10px}.project-actions{gap:7px;margin-top:15px;font-size:10px}.project-details,.project-web{padding:9px 10px}.portrait{width:180px;max-width:100%}dialog{width:calc(100% - 24px);padding:0 9px 9px;border-radius:26px;max-height:94dvh}.dialog-toolbar{height:56px;padding:0 4px 0 12px}.dialog-toolbar .close{width:36px;height:36px}.dialog-content{border-radius:18px}.dialog-scroller{max-height:calc(91dvh - 65px)}.dialog-flow{padding:12px 34px 18px 12px}.dialog-media{padding:5px;border-radius:9px}.dialog-copy{padding:24px 3px 8px}.dialog-copy h2{font-size:35px}.dialog-copy>p{font-size:20px;line-height:1.45}.dialog-copy .concept-note{font-size:11px}.dialog-actions{gap:9px}.dialog-actions .button{font-size:11px;padding:12px}.scroll-handle{stroke-width:3.5}.dialog-scroller:focus-visible{border-radius:18px}}
+@media(prefers-reduced-motion:reduce){.project,.project.reveal-pending{opacity:1;transform:none;transition:none}}
+
+body{overflow-x:clip}
