@@ -83,3 +83,13 @@ body{overflow-x:clip}
 .case-section p:last-child{margin-bottom:0}
 .case-section:last-child{padding-bottom:8px}
 @media(max-width:700px){.dialog-copy>.case-study-intro{font-size:25px}.case-study{margin-top:27px}.case-section{grid-template-columns:19px minmax(0,1fr);gap:10px;padding:22px 0}.case-number{font-size:9px;padding-top:7px}.case-section h3{font-size:26px;margin-bottom:11px}.case-section p{font-size:20px;line-height:1.45;margin-bottom:13px}}
+
+/* Full-bleed blurred artwork behind the complete project screenshot. */
+.image-button{position:relative;isolation:isolate}
+.image-button::before{content:"";position:absolute;inset:-32px;background-image:var(--project-art);background-size:cover;background-position:center;filter:blur(22px);pointer-events:none;z-index:-1}
+.image-button img{position:relative;background:transparent}
+.image-button[data-project="memorybook"]{--project-art:url("assets/memorybook-real.webp")}
+.image-button[data-project="filmlab"]{--project-art:url("assets/filmlab-real.webp")}
+.image-button[data-project="professional"]{--project-art:url("assets/filmlab-pro-real.webp")}
+.image-button[data-project="bimu"]{--project-art:url("assets/bimu-real.webp")}
+.image-button[data-project="soundlify"]{--project-art:url("assets/soundlify-real.webp")}
